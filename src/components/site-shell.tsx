@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router"
 import { Menu, Phone, X } from "lucide-react"
 import { useState, type ReactNode } from "react"
-import { areas, brand, domain, phoneDisplay, phoneHref, services } from "@/lib/site-content"
+import { areas, brand, domain, phoneDisplay, phoneHref, requestServiceUrl, services } from "@/lib/site-content"
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
@@ -21,7 +21,7 @@ export function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-3 sm:flex">
           <a href={phoneHref} className="font-mono text-[12px] text-cool hover:text-primary">{phoneDisplay}</a>
-          <Link to="/contact" className="rounded-full bg-primary px-4 py-2 text-[13px] font-semibold text-primary-foreground">Request service</Link>
+          <a href={requestServiceUrl} className="rounded-full bg-primary px-4 py-2 text-[13px] font-semibold text-primary-foreground">Request service</a>
         </div>
         <button className="grid size-10 place-items-center rounded-full bg-secondary text-secondary-foreground lg:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? <X size={20} /> : <Menu size={20} />}
@@ -71,7 +71,7 @@ export function MobileActions() {
     <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">
       <div className="mx-3 mb-3 flex gap-2 rounded-2xl bg-glass/90 p-2 shadow-float ring-1 ring-line backdrop-blur-xl">
         <a href={phoneHref} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground"><Phone size={17} /> Call</a>
-        <Link to="/contact" className="flex-1 rounded-xl bg-foreground py-3.5 text-center text-sm font-semibold text-background">Request service</Link>
+        <a href={requestServiceUrl} className="flex-1 rounded-xl bg-foreground py-3.5 text-center text-sm font-semibold text-background">Request service</a>
       </div>
     </div>
   )
@@ -95,7 +95,7 @@ export function ContactBand() {
     <section className="mx-auto mt-16 max-w-6xl px-5">
       <div className="overflow-hidden rounded-2xl bg-cool p-7 text-primary-foreground md:flex md:items-center md:justify-between md:p-10">
         <div><p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-soft">Abilene irrigation help</p><h2 className="mt-2 font-display text-2xl font-bold md:text-3xl">Ready to get every zone working again?</h2><p className="mt-2 text-sm text-primary-foreground/75">Call {phoneDisplay} or send the neighborhood, the zone, and what the system is doing.</p></div>
-        <Link to="/contact" className="mt-5 inline-flex rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground md:mt-0">Request service</Link>
+        <a href={requestServiceUrl} className="mt-5 inline-flex rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground md:mt-0">Request service</a>
       </div>
     </section>
   )

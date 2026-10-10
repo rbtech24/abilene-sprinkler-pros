@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, Gauge, MapPin, ShieldCheck, Wrench } from "lu
 import heroImage from "@/assets/abilene-sprinkler-hero.jpg";
 import repairImage from "@/assets/sprinkler-repair-detail.jpg";
 import controllerImage from "@/assets/smart-controller.jpg";
-import { areas, posts, services } from "@/lib/site-content";
+import { areas, posts, requestServiceUrl, services } from "@/lib/site-content";
 import { ContactBand } from "@/components/site-shell";
 
 export const Route = createFileRoute("/")({
@@ -34,7 +34,7 @@ function Index() {
             <h1 className="mt-3 text-balance font-display text-[36px] font-extrabold leading-[1.06] md:text-[50px]">Abilene sprinkler repair, diagnosed right.</h1>
             <p className="mt-4 max-w-[46ch] text-pretty text-[15px] leading-6 text-cool">Help for broken heads, dry zones, leaking lines, stuck valves, and controller problems across Abilene and nearby communities. Call (855) 695-1000.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link to="/contact" className="rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground">Request sprinkler service</Link>
+              <a href={requestServiceUrl} className="rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground">Request sprinkler service</a>
               <Link to="/services" className="rounded-full bg-glass px-5 py-3 text-sm font-semibold ring-1 ring-line">View repair services</Link>
             </div>
           </div>

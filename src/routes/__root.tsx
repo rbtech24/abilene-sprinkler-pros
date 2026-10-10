@@ -115,7 +115,6 @@ function RootShell({ children }: { children: ReactNode }) {
               name: "Abilene Sprinkler Repair",
               url: "https://abilenesprinklerrepair.com",
               telephone: "+1-855-695-1000",
-              email: "admin@mrsprinklerrepair.com",
               areaServed: ["Abilene", "Buffalo Gap", "Tye", "Merkel", "Clyde", "Hawley", "Potosi", "Impact"],
               address: {
                 "@type": "PostalAddress",
