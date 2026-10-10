@@ -12,8 +12,7 @@ export const brand = "Abilene Sprinkler Repair"
 export const domain = "abilenesprinklerrepair.com"
 export const phoneDisplay = "(855) 695-1000"
 export const phoneHref = "tel:+18556951000"
-export const emailDisplay = "admin@mrsprinklerrepair.com"
-export const emailHref = "mailto:admin@mrsprinklerrepair.com"
+export const requestServiceUrl = "https://mrsprinklerrepair.com/request-service/"
 
 export const services: Service[] = [
   {
